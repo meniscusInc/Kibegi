@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Kibegi</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="minimum_selling_cost">Minimum Cost</string>
+    <string name="product_name">Product Name</string>
+    <string name="product_brand">Product Brand</string>
+    <string name="currency">TZS </string>
+</resources>

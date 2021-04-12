@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/item_linearLayout"
+    android:layout_marginHorizontal="6dp"
+    android:layout_marginVertical="8dp"
+    android:background="@drawable/background_item">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="240dp"
+        >
+        <ImageView
+            android:id="@+id/product_imageId"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="2dp"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/airmax"
+            android:background="@drawable/product_image_holder"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"
+
+            android:background="@drawable/icon_backgound"
+            >
+            <ToggleButton
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="7dp"
+                android:padding="7dp"
+                android:textOn=""
+                android:textOff=""
+                android:background="@drawable/toggle_like_selector"/>
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/product_priceId"
+            android:layout_width="match_parent"
+            android:textSize="15sp"
+            android:fontFamily="@font/gabriel_sans_black"
+            android:textStyle="normal"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/dark"
+            android:text="TSH 00,000/-"/>
+
+        <TextView
+            android:id="@+id/product_nameId"
+            android:layout_width="match_parent"
+            android:textSize="13sp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gabriel_sans_normal"
+            android:textColor="@android:color/darker_gray"
+            android:textAllCaps="false"
+            android:text="@string/product_name"/>
+        <TextView
+            android:id="@+id/product_brandId"
+            android:layout_width="wrap_content"
+            android:textSize="13sp"
+            android:fontFamily="@font/gabriel_sans_normal"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/darker_gray"
+            android:text="@string/product_brand"/>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
