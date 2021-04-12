@@ -24,6 +24,6 @@
         app:itemHorizontalTranslationEnabled="true"
         app:itemBackground="@drawable/nav_icon_background"
         android:layout_alignParentBottom="true"
-        app:menu="@menu/bottom_namvigation"/>
+        app:menu="@menu/bottom_navigation"/>
 
 </RelativeLayout>

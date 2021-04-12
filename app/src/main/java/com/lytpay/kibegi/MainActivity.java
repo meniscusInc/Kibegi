@@ -1,12 +1,10 @@
 package com.lytpay.kibegi;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 
 import android.os.Bundle;
-import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.lytpay.kibegi.Fragments.Account;
@@ -32,67 +30,56 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         bottomNavigationView = findViewById(R.id.btmNavigation);
-
-
-
-
-
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Home());
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
-            Fragment selectedFrag = null;
-            switch (item.getItemId()){
+            Fragment selectedFragment = null;
+            switch (item.getItemId()) {
                 case ID_HOME:
-                    selectedFrag = new Home();
+                    selectedFragment = new Home();
                     break;
                 case ID_ADD:
-                    selectedFrag = new Add();
-                    break;
-                case ID_ACCOUNT:
-                    selectedFrag = new Account();
+                    selectedFragment = new Add();
                     break;
                 case ID_CART:
-                    selectedFrag = new Cart();
+                    selectedFragment = new Cart();
+                    break;
+                case ID_ACCOUNT:
+                    selectedFragment = new Account();
                     break;
                 case ID_SEARCH:
-                    selectedFrag = new Search();
+                    selectedFragment = new Search();
                     break;
             }
 
-            assert selectedFrag != null;
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFrag).commit();
-
-            return  true;
+            assert selectedFragment != null;
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container, selectedFragment)
+                    .commit();
+            return true;
         });
 
-        bottomNavigationView.setOnNavigationItemReselectedListener(item -> {
-            Fragment selectedFrag = null;
-            switch (item.getItemId()){
-                case ID_HOME:
-                    selectedFrag = new Home();
-                    break;
-                case ID_ADD:
-                    selectedFrag = new Add();
-                    break;
-                case ID_ACCOUNT:
-                    selectedFrag = new Account();
-                    break;
-                case ID_CART:
-                    selectedFrag = new Cart();
-                    break;
-                case ID_SEARCH:
-                    selectedFrag = new Search();
-                    break;
-            }
-
-            assert selectedFrag != null;
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFrag).commit();
-
-
-        });
-
-
-
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragment_container,new Home()).commit();
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
