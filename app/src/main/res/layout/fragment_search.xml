@@ -7,19 +7,21 @@
     tools:context=".Fragments.Search">
 
 
-        <EditText
+        <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/searchBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/product_image_holder"
+            android:background="@drawable/edit_text_background"
             android:hint="@string/search_products"
             android:textColor="@color/lightgreen"
+            android:drawablePadding="5dp"
+            android:drawableEnd="@drawable/custom_search_selector"
             android:paddingVertical="10dp"
             android:paddingHorizontal="5dp"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
             android:layout_margin="30dp"
-            android:textColorHint="@color/light"
+            android:textColorHint="@android:color/darker_gray"
             android:inputType="text"
             android:autofillHints="" />
 
@@ -30,6 +32,14 @@
         android:overScrollMode="never"
         android:background="@drawable/page_background"
         android:visibility="visible"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/searchResults"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:background="@drawable/page_background"
+        android:visibility="invisible"/>
 
 
 
