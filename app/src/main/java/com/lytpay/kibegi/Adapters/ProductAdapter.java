@@ -1,7 +1,6 @@
 package com.lytpay.kibegi.Adapters;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,7 +28,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductViewHolder> {
     @NonNull
     @Override
     public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_design,parent,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.product_view,parent,false);
         return new ProductViewHolder(view);
     }
 
@@ -41,14 +40,11 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductViewHolder> {
         holder.priceViewHolder.setText("TZS " +product.getProduct_price() + "/-");
         Picasso.get().load(product.getImage_url()).into(holder.imageViewHolder);
 
-        holder.linearLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        holder.linearLayout.setOnClickListener(v -> {
 //                Intent intent = new Intent(context, BuyActivity.class);
 //                intent.putExtra("productClass",product);
 //                context.startActivity(intent);
-                Toast.makeText(context, holder.nameViewHolder.getText().toString()+ " clicked", Toast.LENGTH_SHORT).show();
-            }
+            Toast.makeText(context, holder.nameViewHolder.getText().toString()+ " clicked", Toast.LENGTH_SHORT).show();
         });
     }
 

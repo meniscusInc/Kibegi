@@ -1,17 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/lightgreen"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Fragments.Search">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="32sp"
-        android:layout_centerInParent="true"
-        android:text="search" />
 
-</RelativeLayout>
+        <EditText
+            android:id="@+id/searchBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/product_image_holder"
+            android:hint="@string/search_products"
+            android:textColor="@color/lightgreen"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="5dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_margin="30dp"
+            android:textColorHint="@color/light"
+            android:inputType="text"
+            android:autofillHints="" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categoryRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:background="@drawable/page_background"
+        android:visibility="visible"/>
+
+
+
+</LinearLayout>

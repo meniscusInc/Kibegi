@@ -7,4 +7,6 @@
     <string name="product_brand">Product Brand</string>
     <string name="currency">TZS </string>
     <string name="tsh_00_000">TSH 00,000/-</string>
+    <string name="search_products">Search Products</string>
+    <string name="category_name">Category Name</string>
 </resources>
