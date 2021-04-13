@@ -47,7 +47,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductViewHolder> {
 //                Intent intent = new Intent(context, BuyActivity.class);
 //                intent.putExtra("productClass",product);
 //                context.startActivity(intent);
-                Toast.makeText(context, "item clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, holder.nameViewHolder.getText().toString()+ " clicked", Toast.LENGTH_SHORT).show();
             }
         });
     }

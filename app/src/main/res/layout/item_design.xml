@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -9,47 +10,59 @@
     android:layout_marginVertical="8dp"
     android:background="@drawable/background_item">
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="240dp"
-        >
-        <ImageView
-            android:id="@+id/product_imageId"
-            android:layout_width="match_parent"
-            android:layout_height="240dp"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="2dp"
-            android:layout_marginTop="2dp"
-            android:src="@drawable/airmax"
-            android:background="@drawable/product_image_holder"
-            android:scaleType="centerCrop"/>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_margin="10dp"
+        
 
-            android:background="@drawable/icon_backgound"
-            >
-            <ToggleButton
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_margin="7dp"
-                android:padding="7dp"
-                android:textOn=""
-                android:textOff=""
-                android:background="@drawable/toggle_like_selector"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="240dp">
 
-        </LinearLayout>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/product_imageId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:src="@drawable/airmax"
+                android:background="@drawable/product_image_holder"
+                tools:ignore="ContentDescription"
+                app:shapeAppearanceOverlay="@style/rounded_corners"
+                android:layout_gravity="center"
 
+                android:scaleType="centerCrop"/>
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="10dp"
 
+                android:background="@drawable/icon_backgound"
+                >
+                <ToggleButton
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_margin="7dp"
+                    android:padding="7dp"
+                    android:textOn=""
+                    android:textOff=""
+                    android:background="@drawable/toggle_like_selector"/>
 
+            </LinearLayout>
     </RelativeLayout>
+
+        
+
+
+
+
+
+
+
+
 
 
 
@@ -61,13 +74,13 @@
         <TextView
             android:id="@+id/product_priceId"
             android:layout_width="match_parent"
-            android:textSize="15sp"
+            android:textSize="16sp"
             android:fontFamily="@font/gabriel_sans_black"
-            android:textStyle="normal"
+            android:textStyle="bold"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:textColor="@color/dark"
-            android:text="TSH 00,000/-"/>
+            android:text="@string/tsh_00_000"/>
 
         <TextView
             android:id="@+id/product_nameId"

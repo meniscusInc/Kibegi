@@ -8,6 +8,7 @@
     tools:context=".Fragments.HomeFrags.Trending">
 
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/trending_recyclerview"
         android:layout_width="match_parent"

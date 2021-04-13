@@ -14,7 +14,7 @@ import com.lytpay.kibegi.Fragments.HomeFrags.Watches;
 
 public class PagerHomeAdapter extends FragmentStatePagerAdapter {
 
-    private int fragNum;
+    private final int fragNum;
 
     public PagerHomeAdapter(@NonNull FragmentManager fm, int tabNo) {
         super(fm);
