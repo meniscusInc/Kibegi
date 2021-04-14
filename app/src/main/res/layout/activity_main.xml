@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="@color/white"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Activities.MainActivity">
 
     <FrameLayout
         android:id="@+id/fragment_container"
@@ -19,11 +19,11 @@
         android:layout_height="80dp"
         app:itemIconTint="@color/nav_color"
         app:labelVisibilityMode="unlabeled"
+        android:layout_gravity="bottom"
         android:background="@color/white"
         app:itemIconSize="20dp"
         app:itemHorizontalTranslationEnabled="true"
         app:itemBackground="@drawable/nav_icon_background"
-        android:layout_alignParentBottom="true"
         app:menu="@menu/bottom_navigation"/>
 
-</RelativeLayout>
+</FrameLayout>

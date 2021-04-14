@@ -1,6 +1,8 @@
 package com.lytpay.kibegi.Adapters;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +11,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.lytpay.kibegi.Activities.ProductDetails;
 import com.lytpay.kibegi.Models.ProductModel;
 import com.lytpay.kibegi.R;
 import com.lytpay.kibegi.viewholder.ProductViewHolder;
@@ -41,10 +44,13 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductViewHolder> {
         Picasso.get().load(product.getImage_url()).into(holder.imageViewHolder);
 
         holder.linearLayout.setOnClickListener(v -> {
-//                Intent intent = new Intent(context, BuyActivity.class);
-//                intent.putExtra("productClass",product);
-//                context.startActivity(intent);
-            Toast.makeText(context, holder.nameViewHolder.getText().toString()+ " clicked", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context, ProductDetails.class);
+                intent.putExtra("PRODUCT_NAME",product.getProduct_name());
+                intent.putExtra("PRODUCT_BRAND",product.getProduct_brand());
+                intent.putExtra("PRODUCT_PRICE",product.getProduct_price());
+                intent.putExtra("PRODUCT_IMAGE",product.getImage_url());
+                context.startActivity(intent);
+                ((Activity) context).finish();
         });
     }
 

@@ -1,4 +1,4 @@
-package com.lytpay.kibegi;
+package com.lytpay.kibegi.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -12,6 +12,7 @@ import com.lytpay.kibegi.Fragments.Add;
 import com.lytpay.kibegi.Fragments.Cart;
 import com.lytpay.kibegi.Fragments.Home;
 import com.lytpay.kibegi.Fragments.Search;
+import com.lytpay.kibegi.R;
 
 
 public class MainActivity extends AppCompatActivity {

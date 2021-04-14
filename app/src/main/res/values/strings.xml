@@ -6,7 +6,15 @@
     <string name="product_name">Product Name</string>
     <string name="product_brand">Product Brand</string>
     <string name="currency">TZS </string>
-    <string name="tsh_00_000">TSH 00,000/-</string>
+    <string name="tsh_00_000">TZS 00,000/-</string>
     <string name="search_products">Search Products</string>
     <string name="category_name">Category Name</string>
+    <string name="cartbutton">cartButton</string>
+    <string name="delivery_return_info"><![CDATA[Delivery & Return Info]]></string>
+    <string name="product_details">Product Details</string>
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="color">Color</string>
+    <string name="brand">Brand\t</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet venenatis urna cursus eget nunc scelerisque viverra mauris. Odio aenean sed adipiscing diam donec adipiscing tristique risus. Viverra mauris in aliquam sem fringilla ut morbi tincidunt. Aenean et tortor at risus viverra adipiscing. Scelerisque in dictum non consectetur a erat. Eget nullam non nisi est. Facilisis mauris sit amet massa vitae. Dui sapien eget mi proin sed. Mauris a diam maecenas sed enim ut. Fermentum et sollicitudin ac orci phasellus egestas. Hendrerit gravida rutrum quisque non.</string>
+    <string name="shiping_cost">Shiping Cost</string>
 </resources>
