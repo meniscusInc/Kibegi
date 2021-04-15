@@ -43,6 +43,7 @@
                 android:background="@drawable/icon_backgound"
                 >
                 <ToggleButton
+                    android:id="@+id/toggle_likeButton"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:layout_margin="7dp"

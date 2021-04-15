@@ -5,6 +5,7 @@ import androidx.transition.AutoTransition;
 import androidx.transition.TransitionManager;
 import androidx.viewpager.widget.ViewPager;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -26,6 +27,8 @@ import com.lytpay.kibegi.R;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
+
+import static java.security.AccessController.getContext;
 
 public class ProductDetails extends AppCompatActivity {
 
@@ -71,7 +74,7 @@ public class ProductDetails extends AppCompatActivity {
 
 
 
-        ImagePagerAdapter adapter = new ImagePagerAdapter(this);
+        ImagePagerAdapter adapter = new ImagePagerAdapter(this,this);
         viewPager.setAdapter(adapter);
 
         TabLayout tabLayout = findViewById(R.id.tabDots);

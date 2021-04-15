@@ -1,30 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:id="@+id/viewOpt"
-    android:paddingTop="10dp"
+<RelativeLayout android:id="@+id/viewOpt"
     android:clickable="true"
     android:orientation="vertical"
-    android:background="@drawable/custom_ripple"
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:focusable="true">
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginVertical="10dp"
+    android:background="@drawable/custom_ripple"
+    android:focusable="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_marginVertical="10dp"
-        android:layout_height="wrap_content">
-        <ImageButton
-            android:layout_width="40dp"
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="110dp"
             android:layout_centerVertical="true"
-            android:layout_height="40dp"
-            android:layout_marginStart="20dp"
+            android:layout_height="80dp"
             android:id="@+id/catIcon"
-            android:scaleType="centerInside"
+            android:layout_marginEnd="2dp"
+            android:layout_marginVertical="2dp"
+            android:scaleType="centerCrop"
             android:clickable="false"
             android:background="@drawable/background_item"
-            android:src="@drawable/left_arrow"
-            android:layout_alignParentStart="true"
+            app:shapeAppearanceOverlay="@style/rounded_corners"
+            android:src="@drawable/airmax"
+            android:layout_alignParentEnd="true"
             android:contentDescription="@string/cartbutton" />
+        <View
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginVertical="2dp"
+            android:layout_marginEnd="33dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/image_gradient"/>
+
 
         <TextView
             android:id="@+id/catName"
@@ -35,16 +43,8 @@
             android:textSize="20sp"
             android:layout_centerVertical="true"
             android:layout_marginStart="20dp"
-            android:layout_toEndOf="@+id/catIcon"/>
-
-    </RelativeLayout>
+            android:layout_alignParentStart="true"/>
 
 
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginHorizontal="20dp"
-        android:background="@color/light_200"/>
-
-</LinearLayout>
+</RelativeLayout>

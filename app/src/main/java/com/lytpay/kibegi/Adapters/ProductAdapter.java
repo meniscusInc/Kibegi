@@ -3,6 +3,8 @@ package com.lytpay.kibegi.Adapters;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +24,7 @@ import java.util.List;
 public class ProductAdapter extends RecyclerView.Adapter<ProductViewHolder> {
     private final Context context;
     private final List<ProductModel> list;
+//    private final Activity activity;
 
     public ProductAdapter(Context context, List<ProductModel> list) {
         this.context = context;
@@ -42,6 +45,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductViewHolder> {
         holder.brandViewHolder.setText(product.getProduct_brand());
         holder.priceViewHolder.setText("TZS " +product.getProduct_price() + "/-");
         Picasso.get().load(product.getImage_url()).into(holder.imageViewHolder);
+
 
         holder.linearLayout.setOnClickListener(v -> {
                 Intent intent = new Intent(context, ProductDetails.class);

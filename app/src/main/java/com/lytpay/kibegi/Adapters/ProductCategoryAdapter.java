@@ -1,17 +1,27 @@
 package com.lytpay.kibegi.Adapters;
 
+import android.app.Activity;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ActionMenuView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+import androidx.core.content.ContextCompat;
+import androidx.core.graphics.ColorUtils;
+import androidx.palette.graphics.Palette;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.lytpay.kibegi.Activities.MainActivity;
 import com.lytpay.kibegi.Models.ProductCategoryModel;
 import com.lytpay.kibegi.Models.ProductCategorySelectorModal;
 import com.lytpay.kibegi.Models.ProductModel;
@@ -58,10 +68,17 @@ public class ProductCategoryAdapter extends RecyclerView.Adapter<ProductCategory
         else if(productCategorySelectorModalList != null){
             final ProductCategorySelectorModal categorySelectorModel = productCategorySelectorModalList.get(position);
 
+
+            Bitmap icon = BitmapFactory.decodeResource(context.getResources(),
+                    categorySelectorModel.getCatIconSelector());
+
             //holder2
             holder.catSelectorName.setText(categorySelectorModel.getCatNameSelector());
             holder.catSelectorIcon.setImageResource(categorySelectorModel.getCatIconSelector());
             holder.catOption.setOnClickListener(v -> Toast.makeText(context, holder.catSelectorName.getText(), Toast.LENGTH_SHORT).show());
+
+
+
         }
 
     }
