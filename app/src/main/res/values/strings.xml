@@ -17,4 +17,6 @@
     <string name="brand">Brand\t</string>
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet venenatis urna cursus eget nunc scelerisque viverra mauris. Odio aenean sed adipiscing diam donec adipiscing tristique risus. Viverra mauris in aliquam sem fringilla ut morbi tincidunt. Aenean et tortor at risus viverra adipiscing. Scelerisque in dictum non consectetur a erat. Eget nullam non nisi est. Facilisis mauris sit amet massa vitae. Dui sapien eget mi proin sed. Mauris a diam maecenas sed enim ut. Fermentum et sollicitudin ac orci phasellus egestas. Hendrerit gravida rutrum quisque non.</string>
     <string name="shiping_cost">Shiping Cost</string>
+    <string name="select_category">SELECT CATEGORY</string>
+    <string name="your_cart">YOUR CART</string>
 </resources>

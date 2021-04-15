@@ -44,27 +44,6 @@ public class Search extends Fragment {
         searchBox = view.findViewById(R.id.searchBox);
 
 
-
-
-//        searchBox.DrawableClickListener(new DrawableClickListener() {
-//
-//
-//            public void onClick(DrawablePosition target) {
-//                switch (target) {
-//                    case RIGHT:
-//                        //Do something
-//                        Toast.makeText(getContext(), "coming soon", Toast.LENGTH_SHORT).show();
-//                        break;
-//
-//                    default:
-//                        break;
-//                }
-//            }
-//
-//        });
-
-
-
         GridLayoutManager layoutManager = new GridLayoutManager(getContext(),2,GridLayoutManager.VERTICAL,false);
         categoryRecycler.setLayoutManager(layoutManager);
         categoryRecycler.setHasFixedSize(true);
@@ -81,7 +60,7 @@ public class Search extends Fragment {
         categoryList.add(new ProductCategoryModel("Toys", R.drawable.toys_category));
         categoryList.add(new ProductCategoryModel("Cleaning", R.drawable.cleaning_category));
 
-        ProductCategoryAdapter categoryAdapter = new ProductCategoryAdapter(getContext(),categoryList);
+        ProductCategoryAdapter categoryAdapter = new ProductCategoryAdapter(getContext(),R.layout.product_category_view,categoryList,null);
         categoryRecycler.setAdapter(categoryAdapter);
         return view;
     }
