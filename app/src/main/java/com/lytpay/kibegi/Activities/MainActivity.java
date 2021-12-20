@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     private final int ID_HOME = R.id.nav_home;
     private final int ID_SEARCH = R.id.nav_search;
-    private final int ID_ADD = R.id.nav_add;
+//    private final int ID_ADD = R.id.nav_add;
     private final int ID_CART = R.id.nav_cart;
     private final int ID_ACCOUNT = R.id.nav_account;
     private BottomNavigationView bottomNavigationView;
@@ -65,9 +65,9 @@ public class MainActivity extends AppCompatActivity {
                 case ID_HOME:
                     selectedFragment = new Home(1);
                     break;
-                case ID_ADD:
-                    selectedFragment = new Add();
-                    break;
+//                case ID_ADD:
+//                    selectedFragment = new Add();
+//                    break;
                 case ID_CART:
                     selectedFragment = new Cart();
                     break;
