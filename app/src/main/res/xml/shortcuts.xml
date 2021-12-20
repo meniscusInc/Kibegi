@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <shortcut android:shortcutId = "trending"
+        android:enabled = "true"
+        android:icon = "@drawable/trend"
+        android:shortcutShortLabel="@string/shortcut_short_trend"
+        android:shortcutLongLabel="@string/shortcut_short_trend">
+
+        <intent android:action="android.Intent.action.trend"
+            android:targetPackage="com.lytpay.kibegi"
+            android:targetClass="com.lytpay.kibegi.Activities.MainActivity"/>
+
+        <categories android:name="android.shortcut.conversation"/>
+
+
+    </shortcut>
+    <shortcut android:shortcutId = "electronics"
+        android:enabled = "true"
+        android:icon = "@drawable/headset"
+        android:shortcutShortLabel="@string/shortcut_short_electronics"
+        android:shortcutLongLabel="@string/shortcut_long_electronics">
+
+        <intent android:action="android.Intent.action.electronics"
+            android:targetPackage="com.lytpay.kibegi"
+            android:targetClass="com.lytpay.kibegi.Activities.MainActivity"/>
+
+        <categories android:name="android.shortcut.conversation"/>
+
+
+    </shortcut>
+
+    <shortcut android:shortcutId = "mycart"
+        android:enabled = "true"
+        android:icon = "@drawable/shopping_cart"
+        android:shortcutShortLabel="@string/shortcut_short_yourCart"
+        android:shortcutLongLabel="@string/shortcut_long_yourCart"
+        >
+
+        <intent android:action="android.Intent.action.cart"
+            android:targetPackage="com.lytpay.kibegi"
+            android:targetClass="com.lytpay.kibegi.Activities.MainActivity"/>
+
+        <categories android:name="android.shortcut.conversation"/>
+
+
+    </shortcut>
+
+    <shortcut android:shortcutId = "search"
+        android:enabled = "true"
+        android:icon = "@drawable/search_green"
+        android:shortcutShortLabel="@string/search_short_products"
+        android:shortcutLongLabel="@string/search_products"
+        >
+
+            <intent android:action="android.Intent.action.search"
+                android:targetPackage="com.lytpay.kibegi"
+                android:targetClass="com.lytpay.kibegi.Activities.MainActivity"/>
+
+        <categories android:name="android.shortcut.conversation"/>
+
+
+    </shortcut>
+
+
+
+</shortcuts>
