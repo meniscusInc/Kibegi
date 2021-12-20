@@ -2,6 +2,7 @@ package com.lytpay.kibegi.Adapters;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Build;
@@ -22,6 +23,7 @@ import androidx.palette.graphics.Palette;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.lytpay.kibegi.Activities.MainActivity;
+import com.lytpay.kibegi.Activities.SellItem;
 import com.lytpay.kibegi.Models.ProductCategoryModel;
 import com.lytpay.kibegi.Models.ProductCategorySelectorModal;
 import com.lytpay.kibegi.Models.ProductModel;
@@ -75,7 +77,11 @@ public class ProductCategoryAdapter extends RecyclerView.Adapter<ProductCategory
             //holder2
             holder.catSelectorName.setText(categorySelectorModel.getCatNameSelector());
             holder.catSelectorIcon.setImageResource(categorySelectorModel.getCatIconSelector());
-            holder.catOption.setOnClickListener(v -> Toast.makeText(context, holder.catSelectorName.getText(), Toast.LENGTH_SHORT).show());
+            holder.catOption.setOnClickListener(v -> {
+                Intent intent = new Intent(context, SellItem.class);
+                context.startActivity(intent);
+//                ((Activity)context).finish();
+            });
 
 
 

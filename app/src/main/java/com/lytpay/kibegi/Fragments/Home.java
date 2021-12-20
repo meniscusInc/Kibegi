@@ -2,8 +2,8 @@ package com.lytpay.kibegi.Fragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
@@ -19,10 +19,11 @@ public class Home extends Fragment {
 
   PagerHomeAdapter pagerHomeAdapter;
   private ViewPager viewPager;
-  private TabLayout tabLayout;
+  private final int pagerShortcut;
 
-    public Home() {
-        // Required empty public constructor
+
+    public Home(int page) {
+        this.pagerShortcut = page;
     }
 
 
@@ -38,7 +39,7 @@ public class Home extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        tabLayout = view.findViewById(R.id.tabLayout);
+        TabLayout tabLayout = view.findViewById(R.id.tabLayout);
         viewPager = view.findViewById(R.id.viewPager);
 
         assert getFragmentManager() != null;
@@ -47,7 +48,7 @@ public class Home extends Fragment {
 
 
         viewPager.setAdapter(pagerHomeAdapter);
-        viewPager.setCurrentItem(1);
+        viewPager.setCurrentItem(pagerShortcut);
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override

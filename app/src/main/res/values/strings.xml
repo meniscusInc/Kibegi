@@ -8,6 +8,7 @@
     <string name="currency">TZS </string>
     <string name="tsh_00_000">TZS 00,000/-</string>
     <string name="search_products">Search Products</string>
+    <string name="search_short_products">Search</string>
     <string name="category_name">Category Name</string>
     <string name="cartbutton">cartButton</string>
     <string name="delivery_return_info"><![CDATA[Delivery & Return Info]]></string>
@@ -20,4 +21,17 @@
     <string name="select_category">SELECT CATEGORY</string>
     <string name="your_cart">YOUR CART</string>
     <string name="your_account">YOUR ACCOUNT</string>
+
+
+    <string name="shortcut_long_yourCart">Your Cart</string>
+    <string name="shortcut_short_yourCart">Cart</string>
+
+    <string name="shortcut_long_trend">Trending Items</string>
+    <string name="shortcut_short_trend">Trending</string>
+
+    <string name="shortcut_long_electronics">Electronics</string>
+    <string name="shortcut_short_electronics">Electronics</string>
+
+
+
 </resources>

@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private final int ID_ADD = R.id.nav_add;
     private final int ID_CART = R.id.nav_cart;
     private final int ID_ACCOUNT = R.id.nav_account;
-    BottomNavigationView bottomNavigationView;
+    private BottomNavigationView bottomNavigationView;
 
 
     @Override
@@ -31,11 +31,39 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         bottomNavigationView = findViewById(R.id.btmNavigation);
+
+
+
+        String intentAction = getIntent().getAction();
+        switch (intentAction){
+            case "android.Intent.action.search":
+                openFragment(new Search());
+                break;
+            case "android.Intent.action.cart":
+                openFragment(new Cart());
+                break;
+            case "android.Intent.action.trend":
+                openFragment(new Home(1));
+            case "android.Intent.action.electronics":
+                openFragment(new Home(2));
+            default:
+                normalAction();
+        }
+
+
+    }
+
+    private void openFragment(Fragment fragment) {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragment_container,fragment).commit();
+    }
+
+    private void normalAction() {
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
             Fragment selectedFragment = null;
             switch (item.getItemId()) {
                 case ID_HOME:
-                    selectedFragment = new Home();
+                    selectedFragment = new Home(1);
                     break;
                 case ID_ADD:
                     selectedFragment = new Add();
@@ -59,31 +87,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fragment_container,new Home()).commit();
+                .replace(R.id.fragment_container,new Home(1)).commit();
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

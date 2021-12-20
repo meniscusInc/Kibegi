@@ -54,7 +54,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductViewHolder> {
                 intent.putExtra("PRODUCT_PRICE",product.getProduct_price());
                 intent.putExtra("PRODUCT_IMAGE",product.getImage_url());
                 context.startActivity(intent);
-                ((Activity) context).finish();
+//                ((Activity) context).finish();
         });
     }
 
