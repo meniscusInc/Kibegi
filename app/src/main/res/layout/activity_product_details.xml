@@ -7,18 +7,19 @@
     android:animateLayoutChanges="true"
     android:background="@color/white"
     tools:context=".Activities.ProductDetails">
+
   <ImageButton
       android:id="@+id/backButton"
-      android:layout_width="40dp"
-      android:layout_height="40dp"
-      android:layout_marginTop="35dp"
-      android:layout_marginStart="20dp"
-      android:scaleType="centerInside"
-      android:background="@drawable/background_item"
-      android:src="@drawable/left_arrow"
-      android:tint="@color/dark"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
       android:layout_alignParentStart="true"
-      android:contentDescription="@string/cartbutton" />
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="35dp"
+      android:background="@drawable/background_item"
+      android:contentDescription="@string/cartbutton"
+      android:scaleType="centerInside"
+      android:src="@drawable/left_arrow"
+      android:tint="@color/dark" />
 
   <ScrollView
       android:layout_width="match_parent"
@@ -38,21 +39,24 @@
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/imageViewPager"
             android:layout_width="match_parent"
-            android:layout_height="500dp"/>
+            android:layout_height="500dp"
+            tools:ignore="SpeakableTextPresentCheck" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
 
             android:orientation="vertical">
+
           <com.google.android.material.tabs.TabLayout
               android:id="@+id/tabDots"
               android:layout_width="match_parent"
-              android:background="#00FFFFFF"
               android:layout_height="wrap_content"
+              android:background="#00FFFFFF"
               app:tabBackground="@drawable/tab_selector"
               app:tabGravity="center"
-              app:tabIndicatorHeight="0dp"/>
+              app:tabIndicatorHeight="0dp"
+              tools:ignore="SpeakableTextPresentCheck" />
 
           <LinearLayout
               android:layout_width="match_parent"
@@ -312,22 +316,22 @@
   </ScrollView>
 
 
-
   <Button
       android:id="@+id/addToCart"
-      android:paddingHorizontal="20dp"
-      android:gravity="center"
-      android:layout_centerHorizontal="true"
-      android:layout_alignParentBottom="true"
       android:layout_width="wrap_content"
-      android:layout_height="40dp"
+      android:layout_height="48dp"
+      android:layout_alignParentBottom="true"
+      android:layout_centerHorizontal="true"
+      android:layout_marginBottom="20dp"
+      android:background="@drawable/button_shape"
       android:clickable="true"
       android:drawablePadding="20dp"
-      android:layout_marginBottom="20dp"
-    android:background="@drawable/button_shape"
-    android:textColor="@color/white"
-    android:text="@string/add_to_cart"
-      android:focusable="true" />
+
+      android:focusable="true"
+      android:gravity="center"
+      android:paddingHorizontal="20dp"
+      android:text="@string/add_to_cart"
+      android:textColor="@color/white" />
 
 
 

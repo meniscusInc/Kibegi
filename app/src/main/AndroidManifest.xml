@@ -11,11 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Kibegi">
-        <activity android:name=".Activities.SellItem"/>
+        <activity android:name=".Activities.SellItem"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
         <activity
             android:name=".Activities.ProductDetails"
-            android:theme="@style/Transparent" />
-        <activity android:name=".Activities.MainActivity">
+            android:theme="@style/Transparent"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity android:name=".Activities.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
