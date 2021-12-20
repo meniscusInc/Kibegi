@@ -5,10 +5,12 @@
       <map>
         <entry key="app/src/main/res/drawable/add.xml" value="0.109375" />
         <entry key="app/src/main/res/drawable/background_item.xml" value="0.109375" />
+        <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.109375" />
         <entry key="app/src/main/res/drawable/like_solid.xml" value="0.109375" />
         <entry key="app/src/main/res/drawable/nav_icon_background.xml" value="0.109375" />
         <entry key="app/src/main/res/drawable/nav_icon_background_land.xml" value="0.109375" />
         <entry key="app/src/main/res/drawable/page_background.xml" value="0.109375" />
+        <entry key="app/src/main/res/drawable/splash_screen_background.xml" value="0.21510416666666668" />
         <entry key="app/src/main/res/layout-sw600dp/activity_main.xml" value="0.14921875" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19895833333333332" />
         <entry key="app/src/main/res/layout/activity_product_details.xml" value="0.37540378701008836" />
@@ -22,11 +24,15 @@
         <entry key="app/src/main/res/layout/product_cat_option.xml" value="0.1" />
         <entry key="app/src/main/res/layout/product_category_view.xml" value="0.1" />
         <entry key="app/src/main/res/layout/product_view.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/splash.xml" value="0.19895833333333332" />
         <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.1" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.109375" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.109375" />
+        <entry key="app/src/main/res/xml/shortcuts.xml" value="0.1" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15_PREVIEW" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

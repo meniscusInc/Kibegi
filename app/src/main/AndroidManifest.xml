@@ -13,19 +13,26 @@
         android:theme="@style/Theme.Kibegi">
         <activity android:name=".Activities.SellItem"
             android:configChanges="orientation|screenSize|keyboardHidden"/>
+
         <activity
             android:name=".Activities.ProductDetails"
             android:theme="@style/Transparent"
             android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity android:name=".Activities.SplashScreenActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/SplashScreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".Activities.MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-            <meta-data android:name="android.app.shortcuts"
-                android:resource="@xml/shortcuts"/>
         </activity>
     </application>
 

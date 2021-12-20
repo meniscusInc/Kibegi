@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     private final int ID_HOME = R.id.nav_home;
     private final int ID_SEARCH = R.id.nav_search;
-//    private final int ID_ADD = R.id.nav_add;
+    private final int ID_ADD = R.id.nav_add;
     private final int ID_CART = R.id.nav_cart;
     private final int ID_ACCOUNT = R.id.nav_account;
     private BottomNavigationView bottomNavigationView;
@@ -34,21 +34,23 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        String intentAction = getIntent().getAction();
-        switch (intentAction){
-            case "android.Intent.action.search":
-                openFragment(new Search());
-                break;
-            case "android.Intent.action.cart":
-                openFragment(new Cart());
-                break;
-            case "android.Intent.action.trend":
-                openFragment(new Home(1));
-            case "android.Intent.action.electronics":
-                openFragment(new Home(2));
-            default:
-                normalAction();
-        }
+//        String intentAction = getIntent().getAction();
+//        switch (intentAction){
+//            case "android.Intent.action.search":
+//                openFragment(new Search());
+//                break;
+//            case "android.Intent.action.cart":
+//                openFragment(new Cart());
+//                break;
+//            case "android.Intent.action.trend":
+//                openFragment(new Home(1));
+//            case "android.Intent.action.electronics":
+//                openFragment(new Home(2));
+//            default:
+//                normalAction();
+//        }
+        normalAction();
+
 
 
     }
@@ -65,9 +67,9 @@ public class MainActivity extends AppCompatActivity {
                 case ID_HOME:
                     selectedFragment = new Home(1);
                     break;
-//                case ID_ADD:
-//                    selectedFragment = new Add();
-//                    break;
+                case ID_ADD:
+                    selectedFragment = new Add();
+                    break;
                 case ID_CART:
                     selectedFragment = new Cart();
                     break;

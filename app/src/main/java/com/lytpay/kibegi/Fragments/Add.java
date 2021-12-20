@@ -1,12 +1,15 @@
 package com.lytpay.kibegi.Fragments;
 
 import android.app.Activity;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.palette.graphics.Palette;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,9 +24,13 @@ import com.lytpay.kibegi.R;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 
 public class Add extends Fragment {
+    List<ProductCategorySelectorModal> catSelectorList;
+    RecyclerView category_selector;
+    ProductCategoryAdapter categoryAdapter;
 
     public Add() {
         // Required empty public constructor
@@ -46,10 +53,17 @@ public class Add extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_add, container, false);
 
-        RecyclerView category_selector = view.findViewById(R.id.catOptionsRecycler);
-        category_selector.setLayoutManager(new LinearLayoutManager(getContext()));
+         category_selector = view.findViewById(R.id.catOptionsRecycler);
 
-        List<ProductCategorySelectorModal> catSelectorList = new ArrayList<>();
+
+        if(Objects.requireNonNull(getActivity()).getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
+            category_selector.setLayoutManager(new GridLayoutManager(getContext(),1,GridLayoutManager.VERTICAL,false));
+        }else{
+            category_selector.setLayoutManager(new GridLayoutManager(getContext(),2,GridLayoutManager.VERTICAL,false));
+        }
+        category_selector.setHasFixedSize(true);
+
+         catSelectorList = new ArrayList<>();
 
         catSelectorList.add(new ProductCategorySelectorModal("Shoes", R.drawable.shoes_category));
         catSelectorList.add(new ProductCategorySelectorModal("Hand Bags", R.drawable.hand_bag_category));
@@ -70,9 +84,26 @@ public class Add extends Fragment {
         catSelectorList.add(new ProductCategorySelectorModal("Toys", R.drawable.toys_category));
         catSelectorList.add(new ProductCategorySelectorModal("Cleaning", R.drawable.cleaning_category));
 
-        ProductCategoryAdapter categoryAdapter = new ProductCategoryAdapter(getContext(),R.layout.product_cat_option,null,catSelectorList);
+         categoryAdapter = new ProductCategoryAdapter(getContext(),R.layout.product_cat_option,null,catSelectorList);
         category_selector.setAdapter(categoryAdapter);
 
         return view;
+    }
+
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+        int newOrientation = newConfig.orientation;
+
+        if (newOrientation == Configuration.ORIENTATION_LANDSCAPE) {
+            category_selector.setLayoutManager(new GridLayoutManager(getContext(),2,GridLayoutManager.VERTICAL,false));
+        }else{
+            category_selector.setLayoutManager(new GridLayoutManager(getContext(),1,GridLayoutManager.VERTICAL,false));
+        }
+
+        category_selector.setHasFixedSize(true);
+        categoryAdapter = new ProductCategoryAdapter(getContext(),R.layout.product_cat_option,null,catSelectorList);
+        category_selector.setAdapter(categoryAdapter);
     }
 }
